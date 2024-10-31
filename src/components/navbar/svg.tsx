@@ -1,18 +1,16 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 
 export const ChevronDown = (
-    <motion.svg
+    <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="size-6 mx-1"
-        whileHover={{ rotate: 180 }}
-        transition={{ duration: 0.3 }}
+        className="size-6 mx-1 transition-transform duration-300 hover:rotate-180"
     >
         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-    </motion.svg>
+    </svg>
 );
 
 export const AcademicCap = (

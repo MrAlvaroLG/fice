@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Dropdown from './dropdown';
 import './navbar.css';
 
@@ -66,27 +65,15 @@ const NavigationBarButton: React.FC<NavigationBarButtonProps> = ({ text, svgText
             >
                 <span className="text-inherit">{svgText}</span>
                 <span className="text-inherit">{text}</span>
-                <motion.span
-                    className="text-inherit chevron ml-auto md:ml-0"
-                    animate={{ rotate: isDropdownVisible ? 180 : 0 }}
-                    transition={{ duration: 0.3, ease: "linear" }}
-                >
+                <span className={`text-inherit chevron ml-auto md:ml-0 transition-transform duration-300 ${isDropdownVisible ? 'rotate-180' : ''}`}>
                     {chevron}
-                </motion.span>
+                </span>
             </button>
-            <AnimatePresence>
-                {isDropdownVisible && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3, ease: "linear" }}
-                        className={`mt-2 w-full ${isMobileView ? 'relative' : 'absolute'} bg-secondary`}
-                    >
-                        <Dropdown items={dropdownItems} shiftLeft={shiftLeft} />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {isDropdownVisible && (
+                <div className={`mt-2 w-full ${isMobileView ? 'relative' : 'absolute'} bg-secondary transition-opacity duration-300`}>
+                    <Dropdown items={dropdownItems} shiftLeft={shiftLeft} />
+                </div>
+            )}
         </li>
     );
 };
