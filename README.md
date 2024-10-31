@@ -12,5 +12,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy on Server
 
-After configuring the project on your server it will run on port 
+After configuring the project on your server it will run on port 3000:
 [http://localhost:3000](http://localhost:3000)
