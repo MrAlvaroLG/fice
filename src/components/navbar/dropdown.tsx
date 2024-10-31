@@ -1,7 +1,9 @@
 import React from 'react';
 
+
 interface DropdownProps {
     items: string[];
+    shiftLeft?: boolean;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ items }) => {

@@ -32,8 +32,8 @@ export function NavigationBar() {
             <span className='text-2xl text-primary w-6/12'>FICE</span>
             <ul className='flex flex-row justify-around w-7/12'>
                 <NavigationBarButton text="Departamentos" svgText={AcademicCap} chevron={ChevronDown} dropdownItems={['Informática', 'Matemática', 'Ciencias de la Información', 'Física', 'Lic. en Física', 'Lic. en Informática', 'Lic. en Educación Laboral']} />
-                <NavigationBarButton text="Investigación" svgText={Beaker} chevron={ChevronDown} dropdownItems={['Item 1', 'Item 2', 'Item 3']} />
-                <NavigationBarButton text="Sobre Nosotros" svgText={InformationCircle} chevron={ChevronDown} dropdownItems={['Item 1', 'Item 2', 'Item 3']} shiftLeft />
+                <NavigationBarButton text="Investigación" svgText={Beaker} chevron={ChevronDown} dropdownItems={['iA', 'SOBALTIC', 'Matematica Aplicada', 'Matemática Educativa' ]} />
+                <NavigationBarButton text="Sobre Nosotros" svgText={InformationCircle} chevron={ChevronDown} dropdownItems={['Ubicación', 'Contacto', 'Profesorado']} shiftLeft />
             </ul>
         </nav>
     )
