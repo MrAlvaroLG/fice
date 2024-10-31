@@ -1,0 +1,24 @@
+/* navbar.css */
+@media (min-width: 768px) {
+    .hidden-md {
+        display: none;
+    }
+    .block-md {
+        display: block;
+    }
+    .flex-md {
+        display: flex;
+    }
+}
+@media (max-width: 767px) {
+    .navbar {
+        width: 100%;
+    }
+    .navbar ul {
+        width: 100%;
+        height: 100vh; /* Ocupa toda la pantalla */
+        justify-content: flex-start;
+        background-color: var(--bg-secondary); /* Asegúrate de que el fondo sea el mismo que el del navbar */
+        padding-top: 2rem; /* Espacio para el contenido del navbar */
+    }
+}
